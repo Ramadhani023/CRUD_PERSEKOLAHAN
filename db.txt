@@ -23,7 +23,7 @@ CREATE TABLE data_guru (
 );
 
 CREATE TABLE data_mapel (
-    id INT(4) PRIMARY KEY AUTO_INCREMENT,
+    idm INT(4) PRIMARY KEY AUTO_INCREMENT,
     nama_mapel VARCHAR(50) NOT NULL,
     kode_mapel VARCHAR(10) NOT NULL,
     guru_id INT(4),
@@ -33,7 +33,7 @@ CREATE TABLE data_mapel (
 );
 
 CREATE TABLE data_siswa_nilai (
-    id INT(6) PRIMARY KEY AUTO_INCREMENT,
+    idn INT(6) PRIMARY KEY AUTO_INCREMENT,
     siswa_id INT(4),
     mapel_id INT(4),
     nilai INT(11),
@@ -44,7 +44,7 @@ CREATE TABLE data_siswa_nilai (
 );
 
 CREATE TABLE data_siswa_users (
-    id INT(4) PRIMARY KEY AUTO_INCREMENT,
+    idu INT(4) PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,
     email VARCHAR(25) NOT NULL,
     email_verified_at TIMESTAMP,
@@ -55,7 +55,7 @@ CREATE TABLE data_siswa_users (
 );
 
 CREATE TABLE data_siswa_vnilai (
-    id INT AUTO_INCREMENT,
+    idv INT AUTO_INCREMENT,
     nama VARCHAR(150),
     jurusan VARCHAR(15),
     nama_mapel VARCHAR(50),
