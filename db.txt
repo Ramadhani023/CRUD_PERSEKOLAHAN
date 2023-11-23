@@ -61,7 +61,7 @@ CREATE TABLE data_siswa_vnilai (
     nama_mapel VARCHAR(50),
     guru VARCHAR(100),
     nilai INT,
-    PRIMARY KEY (id)
+    PRIMARY KEY (idv)
 );
 
 ALTER TABLE
@@ -69,9 +69,9 @@ ALTER TABLE
 ADD
     FOREIGN KEY (siswa_id) REFERENCES data_siswa(id),
 ADD
-    FOREIGN KEY (mapel_id) REFERENCES data_mapel(id);
+    FOREIGN KEY (mapel_id) REFERENCES data_mapel(idm);
 
 ALTER TABLE
     data_mapel
 ADD
-    FOREIGN KEY (guru_id) REFERENCES data_guru(id);
+    FOREIGN KEY (guru_id) REFERENCES data_guru(idg);
