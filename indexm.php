@@ -35,7 +35,7 @@ $result = $conn->query($sql);
                 echo "<td>" . $row['idm'] . "</td>";
                 echo "<td>" . $row['nama_mapel'] . "</td>";
                 echo "<td>" . $row['kode_mapel'] . "</td>";
-                echo "<td>" . $row['guru_name'] . "</td>";  // Display guru's name
+                echo "<td>" . $row['guru_name'] . "</td>";
                 echo "<td><a href='updatem.php?id=" . $row['idm'] . "'>Edit</a> | <a href='deletem.php?id=" . $row['idm'] . "'>Delete</a></td>";
                 echo "</tr>";
             }

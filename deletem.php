@@ -1,18 +1,3 @@
-<?php
-include 'db.php';
-
-$id = $_GET['id'];
-
-$sql = "DELETE FROM data_mapel WHERE idm=$id";
-
-if ($conn->query($sql) === TRUE) {
-    header("Location: indexm.php");
-    exit();
-} else {
-    echo "Error deleting record: " . $conn->error;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,3 +13,18 @@ if ($conn->query($sql) === TRUE) {
     </form>
 </body>
 </html>
+
+<?php
+include 'db.php';
+
+$id = $_GET['id'];
+
+$sql = "DELETE FROM data_mapel WHERE idm=$id";
+
+if ($conn->query($sql) === TRUE) {
+    header("Location: indexm.php");
+    exit();
+} else {
+    echo "Error deleting record: " . $conn->error;
+}
+?>

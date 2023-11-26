@@ -51,6 +51,8 @@ $row = $result->fetch_assoc();
             }
             ?>
         </select>
+
+        <br>
         
         <input type="submit" value="Update">
     </form>

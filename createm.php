@@ -32,27 +32,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h2>Add Mapel</h2>
     <form method="POST" action="createm.php">
         <h2>Add Mapel</h2>
-        <form method="POST" action="createm.php">
-            <label for="nama_mapel">Nama Mapel :</label>
-            <input type="text" name="nama_mapel" required><br>
 
-            <label for="kode_mapel">Kode :</label>
-            <input type="text" name="kode_mapel" required><br>
+        <label for="nama_mapel">Nama Mapel :</label>
+        <input type="text" name="nama_mapel" required><br>
 
-            <label for="guru_id">Guru :</label>
-            <select name="guru_id">
-                <?php
-                $guru_id = mysqli_query($conn, "SELECT * FROM data_guru ORDER BY idg DESC");
+        <label for="kode_mapel">Kode :</label>
+        <input type="text" name="kode_mapel" required><br>
 
-                while ($guru_data = mysqli_fetch_array($guru_id)) {
-                    echo '<option value="' . $guru_data['idg'] . '">' . $guru_data['nama'] . '</option>';
-                }
-                ?>
-            </select>
+        <label for="guru_id">Guru :</label>
+        <select name="guru_id">
+            <?php
+            $guru_id = mysqli_query($conn, "SELECT * FROM data_guru ORDER BY idg DESC");
 
-            <input type="submit" value="Save">
-        </form>
-
+            while ($guru_data = mysqli_fetch_array($guru_id)) {
+                echo '<option value="' . $guru_data['idg'] . '">' . $guru_data['nama'] . '</option>';
+            }
+            ?>
+        </select>
+        <br>    
         <input type="submit" value="Save">
     </form>
 </body>
