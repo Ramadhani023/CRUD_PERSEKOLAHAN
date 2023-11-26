@@ -15,7 +15,8 @@ $result = $conn->query($sql);
 <body>
     <h2>List Siswa</h2>
     <a href="create.php">Tambahkan Siswa</a><br>
-    <a href="indexg.php">List Guru</a>
+    <a href="indexg.php">List Guru</a><br>  
+    <a href="indexm.php">List Mapel</a>
     <table border="1">
         <tr>
             <th>ID</th>

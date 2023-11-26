@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE data_guru SET nama='$nama', nip='$nip' WHERE idg=$id";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: index.php");
+        header("Location: indexg.php");
         exit();
     } else {
         echo "Error updating record: " . $conn->error;
@@ -33,11 +33,13 @@ $row = $result->fetch_assoc();
     <h2>Edit Guru</h2>
     <form method="POST" action="">
         <input type="hidden" name="id" value="<?php echo $row['idg']; ?>">
+
         <label for="nama">Nama  :</label>
-        <input type="text" name="nama" required><br>
+        <input type="text" name="nama" value="<?php echo $row['nama']; ?>" required><br>
 
         <label for="email">Nip    :</label>
-        <input type="text" name="nip" required><br>
+        <input type="text" name="nip" value="<?php echo $row['nip']; ?>" required><br>
+
         <input type="submit" value="Update">
     </form>
 </body>

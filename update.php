@@ -37,23 +37,25 @@ $row = $result->fetch_assoc();
     <h2>Edit Student</h2>
     <form method="POST" action="">
         <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+
         <label for="nama">Name  :</label>
-        <input type="text" name="nama" required><br>
+        <input type="text" name="nama" value="<?php echo $row['nama']; ?>" required><br>
 
         <label for="jenikel">Gender :</label>
-        <input type="text" name="jenikel" required><br>
+        <input type="text" name="jenikel" value="<?php echo $row['jenikel']; ?>" required><br>
 
         <label for="alamat">Address :</label>
-        <input type="text" name="alamat" required><br>
+        <input type="text" name="alamat" value="<?php echo $row['alamat']; ?>" required><br>
 
         <label for="nohp">Phone :</label>
-        <input type="text" name="nohp" required><br>
+        <input type="text" name="nohp" value="<?php echo $row['nohp']; ?>" required><br>
 
         <label for="jurusan">Department :</label>
-        <input type="text" name="jurusan" required><br>
+        <input type="text" name="jurusan" value="<?php echo $row['jurusan']; ?>" required><br>
 
         <label for="email">Email    :</label>
-        <input type="email" name="email" required><br>
+        <input type="email" name="email" value="<?php echo $row['email']; ?>" required><br>
+
         <input type="submit" value="Update">
     </form>
 </body>
